@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminDashBoard">
+   <left>
+      <VBox prefHeight="548.0" prefWidth="227.0" style="-fx-background-color: #437FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="122.0" prefWidth="227.0">
+               <children>
+                  <ImageView fitHeight="172.0" fitWidth="122.0" layoutX="52.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Picture2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button mnemonicParsing="false" onAction="#addLib" prefHeight="35.0" prefWidth="248.0" text="Add Librarian">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#viewLib" prefHeight="35.0" prefWidth="250.0" text="View Librarian">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteLib" prefHeight="35.0" prefWidth="327.0" text="Delete Librarian">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#adminHome" prefHeight="35.0" prefWidth="250.0" text="Home">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logOut" prefHeight="35.0" prefWidth="267.0" text="Log out">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="170.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Text fx:id="welcomeAdmin" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Text>
+   </center>
+</BorderPane>
