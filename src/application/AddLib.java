@@ -21,16 +21,23 @@ public class AddLib {
 	
 	@FXML 
 	private Label libRegisterError;
+	
+	private static Statement statement;
+	private static ResultSet resultDB;
+	
+	public void setResultDB(String query) throws SQLException {
+		DatabaseConnection connectNow = new DatabaseConnection();
+		Connection connectDB = connectNow.getConnection();
+		statement = connectDB.createStatement();
+		resultDB = statement.executeQuery(query);
+	}
 	/**
 	 * Register an Librarian, add one to the database
 	 * @throws SQLException
 	 */
 	public void registerLib() throws SQLException {
-		DatabaseConnection connectNow = new DatabaseConnection();
-		Connection connectDB = connectNow.getConnection();
-		Statement statement = connectDB.createStatement();
 		try {
-			ResultSet resultDB = statement.executeQuery("Select MAX(Lib_id) FROM Lib");
+			setResultDB("Select MAX(Lib_id) FROM Lib");
 			int max_id = resultDB.next() == true ? resultDB.getInt(1) + 1 : 0;
 			
 			String insertLib = ("insert into Lib (Lib_id, FName, LName, Username, Password, Email, PhoneNumber) "

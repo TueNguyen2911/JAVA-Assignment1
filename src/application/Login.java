@@ -85,7 +85,6 @@ public class Login implements Initializable {
 		// TODO Auto-generated method stub
 		loginChoice.getItems().add("Admin");
 		loginChoice.getItems().add("Librarian");
-		loginChoice.getItems().add("Student");
 		
 	}
 	
